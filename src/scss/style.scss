@@ -1,0 +1,277 @@
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+// Global variables - light theme
+:root {
+	--bg: #fff;
+	--bg-dark: #f6f8f7;
+	--text: #161616;
+	--accent: #003567;
+	--accent2: #80b541;
+}
+
+// Global variables - dark theme
+// @media (prefers-color-scheme: dark) {
+// 	:root {
+// 		color-scheme: dark;
+// 		--bg: #212121;
+// 		--accent-bg: #2b2b2b;
+// 		--text: #dcdcdc;
+// 		--text-light: #ababab;
+// 		--accent: #ffb300;
+// 	}
+// }
+
+// CSS reset
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+// General tags
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	color: var(--text);
+	background-color: var(--bg);
+	font-family: system-ui, sans-serif;
+	font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	// font-family: 'Poppins', sans-serif;
+	margin-bottom: 2rem;
+	font-weight: 900;
+	letter-spacing: -1%;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 4.5rem;
+}
+
+h2 {
+	font-size: 3.6rem;
+}
+
+p {
+	line-height: 1.4;
+}
+
+// General classes
+
+.button {
+	display: inline-block;
+	padding: 1.5rem 3rem;
+	color: var(--accent);
+	border: 2px solid var(--accent);
+	border-radius: 4rem;
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+	transition: color 0.2s, background-color 0.2s, border 0.2s;
+
+	&:hover {
+		color: var(--bg);
+		background-color: var(--accent);
+	}
+
+	&--accent {
+		color: var(--bg);
+		background-color: var(--accent);
+
+		&:hover {
+			color: var(--accent);
+			background: none;
+		}
+	}
+
+	&--green {
+		color: var(--accent);
+		background-color: var(--accent2);
+		border: 2px solid transparent;
+
+		&:hover {
+			color: var(--accent2);
+			background: none;
+			border: 2px solid var(--accent2);
+		}
+	}
+}
+
+.container {
+	margin: auto;
+	padding: 8rem 2rem;
+}
+
+.image {
+	max-width: 100%;
+	border-radius: 25px;
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+}
+
+// Navigation
+
+nav {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 75px;
+	background-color: white;
+	border-bottom: 2px solid var(--accent);
+
+	img {
+		max-height: 5rem;
+	}
+}
+
+// Hero section
+
+.hero {
+	background-color: var(--bg-dark);
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__buttons {
+		margin: 6rem 0;
+	}
+}
+
+// Services section
+
+.services {
+	background-color: var(--bg);
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__info {
+		& > ul {
+			font-weight: bold;
+
+			li {
+				display: flex;
+				align-items: center;
+				margin-bottom: 2rem;
+				letter-spacing: -0.5%;
+				list-style-type: none;
+
+				svg {
+					margin-right: 2rem;
+					width: 2.4rem;
+					height: 2.4rem;
+					color: var(--accent);
+				}
+			}
+		}
+	}
+
+	&__img {
+		display: none;
+	}
+}
+
+// Pricelist section
+
+.pricelist {
+	color: var(--bg);
+	background-color: var(--accent);
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media (width <= 375px) {
+	.navbar {
+		position: relative;
+	}
+
+	.hero {
+		&__buttons {
+			& > .button {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+}
+
+@media (width >= 576px) {
+	.container {
+		max-width: 576px;
+	}
+}
+
+@media (width >= 768px) {
+	.container {
+		max-width: 768px;
+	}
+}
+
+@media (width >= 992px) {
+	.container {
+		max-width: 992px;
+	}
+
+	.hero {
+		&__container {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__info {
+			height: fit-content;
+			margin: auto 0;
+			max-width: 35%;
+		}
+
+		&__img {
+			max-width: 55%;
+		}
+	}
+
+	.services {
+		&__container {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__info {
+			height: fit-content;
+			margin: auto;
+			max-width: 35%;
+		}
+
+		&__img {
+			display: block;
+			max-width: 55%;
+		}
+	}
+}
+
+@media (width >= 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+}
