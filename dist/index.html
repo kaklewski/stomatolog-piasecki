@@ -8,198 +8,333 @@
 	</head>
 	<body>
 		<nav class="navbar">
-    <div class="navbar__container">
+	<div class="navbar__container">
+		<a href="/">
+			<img src="./img/navbar-logo.png" alt="logo" class="navbar__logo" />
+		</a>
 
-        <!-- <img src="./img/logo.png" alt=""> -->
-        nawigacja
-    </div>
-</nav>		<section id="hero" class="hero">
-			<div class="hero__container container">
-				<div class="hero__info">
-					<h1>Zadbam o Twój zdrowy uśmiech.</h1>
-					<p>
-						Wykorzystując moje wieloletnie doświadczenie oraz
-						najnowocześniejsze technologie, zadbam o Twój komfort i
-						zapewnię najwyższej jakości usługę stomatologiczną.
-					</p>
-					<div class="hero__buttons">
-						<a href="" class="button button--accent"
-							>(+48) 691-392-333</a
-						>
-						<a href="" class="button">Napisz</a>
+		<div class="navbar__menu">
+			<a href="#uslugi">Usługi</a>
+			<a href="/cennik">Cennik</a>
+			<a href="#o-mnie">O mnie</a>
+			<a href="/technologie">Technologie</a>
+			<a href="#kontakt">Kontakt</a>
+		</div>
+	</div>
+</nav>
+		<main>
+			<section id="naglowek" class="hero">
+				<div class="hero__container container">
+					<div class="hero__info">
+						<h1>Zadbam o Twój zdrowy uśmiech.</h1>
+						<p>
+							Wykorzystując moje wieloletnie doświadczenie oraz
+							najnowocześniejsze technologie, zadbam o Twój
+							komfort i zapewnię najwyższej jakości usługę
+							stomatologiczną.
+						</p>
+						<div class="hero__buttons">
+							<a href="" class="button button--accent">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-phone"
+									width="40"
+									height="40"
+									viewBox="0 0 24 24"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round">
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"></path>
+									<path
+										d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+								</svg>
+								<span>691-392-333</span>
+							</a>
+							<a href="" class="button">Napisz</a>
+						</div>
+					</div>
+					<img
+						class="hero__img image"
+						src="./img/hero-img.webp"
+						alt="" />
+				</div>
+			</section>
+			<section id="uslugi" class="services">
+				<div class="services__container container">
+					<img
+						class="services__img image"
+						src="./img/services-img.webp"
+						alt="" />
+					<div class="services__info">
+						<h2>Usługi</h2>
+						<ul>
+							<li>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-flare"
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round">
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"></path>
+									<path
+										d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
+								</svg>
+								<span>Stomatologia zachowawcza</span>
+							</li>
+							<li>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-flare"
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round">
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"></path>
+									<path
+										d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
+								</svg>
+								<span>Implantologia</span>
+							</li>
+							<li>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-flare"
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round">
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"></path>
+									<path
+										d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
+								</svg>
+								<span>Leczenie endodontyczne</span>
+							</li>
+							<li>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-flare"
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round">
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"></path>
+									<path
+										d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
+								</svg>
+								<span>Protetyka</span>
+							</li>
+							<li>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-flare"
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round">
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"></path>
+									<path
+										d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
+								</svg>
+								<span>Chirurgia stomatologiczna</span>
+							</li>
+							<li>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-flare"
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round">
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"></path>
+									<path
+										d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
+								</svg>
+								<span>Stomatologia dziecięca</span>
+							</li>
+							<li>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-flare"
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round">
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"></path>
+									<path
+										d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
+								</svg>
+								<span>Medycyna estetyczna</span>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<img class="hero__img image" src="./img/hero-bg.webp" alt="" />
-			</div>
-		</section>
-		<section id="services" class="services">
-			<div class="services__container container">
-				<img
-					class="services__img image"
-					src="./img/hero-bg.webp"
-					alt="" />
-				<div class="services__info">
-					<h2>Usługi</h2>
-					<ul>
-						<li>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="icon icon-tabler icon-tabler-flare"
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								stroke-width="2"
-								stroke="currentColor"
-								fill="none"
-								stroke-linecap="round"
-								stroke-linejoin="round">
-								<path
-									stroke="none"
-									d="M0 0h24v24H0z"
-									fill="none"></path>
-								<path
-									d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
-							</svg>
-							<span>Stomatologia zachowawcza</span>
-						</li>
-						<li>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="icon icon-tabler icon-tabler-flare"
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								stroke-width="2"
-								stroke="currentColor"
-								fill="none"
-								stroke-linecap="round"
-								stroke-linejoin="round">
-								<path
-									stroke="none"
-									d="M0 0h24v24H0z"
-									fill="none"></path>
-								<path
-									d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
-							</svg>
-							<span>Implantologia</span>
-						</li>
-						<li>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="icon icon-tabler icon-tabler-flare"
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								stroke-width="2"
-								stroke="currentColor"
-								fill="none"
-								stroke-linecap="round"
-								stroke-linejoin="round">
-								<path
-									stroke="none"
-									d="M0 0h24v24H0z"
-									fill="none"></path>
-								<path
-									d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
-							</svg>
-							<span>Leczenie endodontyczne</span>
-						</li>
-						<li>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="icon icon-tabler icon-tabler-flare"
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								stroke-width="2"
-								stroke="currentColor"
-								fill="none"
-								stroke-linecap="round"
-								stroke-linejoin="round">
-								<path
-									stroke="none"
-									d="M0 0h24v24H0z"
-									fill="none"></path>
-								<path
-									d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
-							</svg>
-							<span>Protetyka</span>
-						</li>
-						<li>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="icon icon-tabler icon-tabler-flare"
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								stroke-width="2"
-								stroke="currentColor"
-								fill="none"
-								stroke-linecap="round"
-								stroke-linejoin="round">
-								<path
-									stroke="none"
-									d="M0 0h24v24H0z"
-									fill="none"></path>
-								<path
-									d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
-							</svg>
-							<span>Chirurgia stomatologiczna</span>
-						</li>
-						<li>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="icon icon-tabler icon-tabler-flare"
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								stroke-width="2"
-								stroke="currentColor"
-								fill="none"
-								stroke-linecap="round"
-								stroke-linejoin="round">
-								<path
-									stroke="none"
-									d="M0 0h24v24H0z"
-									fill="none"></path>
-								<path
-									d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
-							</svg>
-							<span>Stomatologia dziecięca</span>
-						</li>
-						<li>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="icon icon-tabler icon-tabler-flare"
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								stroke-width="2"
-								stroke="currentColor"
-								fill="none"
-								stroke-linecap="round"
-								stroke-linejoin="round">
-								<path
-									stroke="none"
-									d="M0 0h24v24H0z"
-									fill="none"></path>
-								<path
-									d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
-							</svg>
-							<span>Medycyna estetyczna</span>
-						</li>
-					</ul>
+			</section>
+			<section class="pricelist">
+				<div class="pricelist__container container">
+					<h2>Zapoznaj się z pełną ofertą i korzystnym cennikiem:</h2>
+					<a href="" class="button button--accent">
+						<span>Zobacz cennik</span>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-arrow-right"
+							width="40"
+							height="40"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<path
+								stroke="none"
+								d="M0 0h24v24H0z"
+								fill="none"></path>
+							<path d="M5 12l14 0"></path>
+							<path d="M13 18l6 -6"></path>
+							<path d="M13 6l6 6"></path>
+						</svg>
+					</a>
 				</div>
-			</div>
-		</section>
-		<section id="pricelist" class="pricelist">
-			<div class="pricelist__container container">
-				<h2>Zapoznaj się z moją ofertą i korzystnym cennikiem</h2>
-				<a href="" class="button button--green">Zobacz cennik</a>
-			</div>
-		</section>
-        <section id="about" class="about">
-            <div class="about__container container">afasdfsf</div>
-        </section>
+			</section>
+			<section id="o-mnie" class="about">
+				<div class="about__container container">
+					<img
+						class="about__img image"
+						src="./img/about-img.webp"
+						alt="Dr Wojciech Piasecki" />
+					<div class="about__info">
+						<h2>Dr Wojciech Piasecki</h2>
+						<p>
+							Od 2006 roku prowadzę indywidualną praktykę
+							stomatologiczną. Nieustannie podnoszę swoje
+							kwalifikacje, biorąc udział w licznych konferencjach
+							naukowych, prowadzonych przez najlepszych
+							specjalistów w dziedzinie stomatologii.
+						</p>
+						<p>
+							Mój gabinet jest jednym z najnowocześniejszych i
+							najlepiej wyposażonych w Toruniu, co jest wynikiem
+							mojego głębokiego zainteresowania nowymi
+							technologiami z zakresu stomatologii estetycznej, a
+							także chirurgii i implantologii.
+						</p>
+						<h3>Wykształcenie</h3>
+						<ul>
+							<li>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-circle-check"
+									width="2rem"
+									height="2rem"
+									viewBox="0 0 24 24"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round">
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"></path>
+									<path
+										d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+									<path d="M9 12l2 2l4 -4"></path>
+								</svg>
+								<span
+									>Ukończenie kierunku Stomatologia na
+									Akademii Medycznej w Gdańsku</span
+								>
+							</li>
+							<li>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-circle-check"
+									width="2rem"
+									height="2rem"
+									viewBox="0 0 24 24"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round">
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"></path>
+									<path
+										d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+									<path d="M9 12l2 2l4 -4"></path>
+								</svg>
+								<span
+									>Ukończenie kursu specjalistycznego z
+									zastosowania botoksu oraz kwasu
+									hialuronowego</span
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="office">
+				<div class="office__container container">
+					<h2>Mój gabinet</h2>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>

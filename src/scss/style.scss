@@ -1,12 +1,12 @@
 // Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
 
 // Global variables - light theme
 :root {
 	--bg: #fff;
-	--bg-dark: #f6f8f7;
-	--text: #161616;
-	--accent: #003567;
+	--bg-dark: #eceef5;
+	--text: #0f0f0f;
+	--accent1: #004586;
 	--accent2: #80b541;
 }
 
@@ -51,10 +51,10 @@ h3,
 h4,
 h5,
 h6 {
-	// font-family: 'Poppins', sans-serif;
-	margin-bottom: 2rem;
-	font-weight: 900;
-	letter-spacing: -1%;
+	margin: 2rem 0;
+	color: var(--accent1);
+	font-family: 'Calistoga', cursive;
+	font-weight: 400;
 	line-height: 1.2;
 }
 
@@ -73,47 +73,38 @@ p {
 // General classes
 
 .button {
-	display: inline-block;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 	padding: 1.5rem 3rem;
-	color: var(--accent);
-	border: 2px solid var(--accent);
+	color: var(--bg);
+	background-color: var(--accent1);
 	border-radius: 4rem;
-	text-decoration: none;
+	font-size: 1.6rem;
 	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
 	cursor: pointer;
 	transition: color 0.2s, background-color 0.2s, border 0.2s;
 
-	&:hover {
-		color: var(--bg);
-		background-color: var(--accent);
+	& *:first-child {
+		margin-right: 0.5rem;
+	}
+
+	& > svg {
+		width: 1.6rem;
+		height: 1.6rem;
 	}
 
 	&--accent {
-		color: var(--bg);
-		background-color: var(--accent);
-
-		&:hover {
-			color: var(--accent);
-			background: none;
-		}
-	}
-
-	&--green {
-		color: var(--accent);
+		color: var(--text);
 		background-color: var(--accent2);
-		border: 2px solid transparent;
-
-		&:hover {
-			color: var(--accent2);
-			background: none;
-			border: 2px solid var(--accent2);
-		}
 	}
 }
 
 .container {
 	margin: auto;
-	padding: 8rem 2rem;
+	padding: 6rem 2rem;
 }
 
 .image {
@@ -125,17 +116,43 @@ p {
 
 // Navigation
 
-nav {
+.navbar {
 	position: sticky;
 	top: 0;
-	left: 0;
 	width: 100%;
-	height: 75px;
-	background-color: white;
-	border-bottom: 2px solid var(--accent);
+	color: var(--bg);
+	background-color: var(--accent1);
+	z-index: 100;
 
-	img {
-		max-height: 5rem;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem;
+		height: 100%;
+		margin: auto;
+	}
+
+	&__logo {
+		max-height: 4.5rem;
+	}
+
+	&__menu {
+		& > a {
+			margin-left: 3.2rem;
+			padding-bottom: 0.3rem;
+			color: var(--bg);
+			border-bottom: 2px solid transparent;
+			font-size: 1.6rem;
+			font-weight: bold;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: border 0.2s;
+
+			&:hover {
+				border-bottom: 2px solid var(--accent2);
+			}
+		}
 	}
 }
 
@@ -150,7 +167,7 @@ nav {
 	}
 
 	&__buttons {
-		margin: 6rem 0;
+		margin: 4rem 0;
 	}
 }
 
@@ -166,20 +183,18 @@ nav {
 
 	&__info {
 		& > ul {
-			font-weight: bold;
-
 			li {
 				display: flex;
 				align-items: center;
 				margin-bottom: 2rem;
-				letter-spacing: -0.5%;
+				font-weight: bold;
 				list-style-type: none;
 
 				svg {
 					margin-right: 2rem;
 					width: 2.4rem;
 					height: 2.4rem;
-					color: var(--accent);
+					color: var(--accent2);
 				}
 			}
 		}
@@ -193,15 +208,61 @@ nav {
 // Pricelist section
 
 .pricelist {
-	color: var(--bg);
-	background-color: var(--accent);
+	background-color: var(--accent1);
 
 	&__container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		h2 {
+			margin-bottom: 4rem;
+			color: var(--bg);
+			text-align: center;
+		}
 	}
 }
+
+// About section
+
+.about {
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__img {
+		aspect-ratio: 1 / 1;
+	}
+
+	&__info {
+		p {
+			margin-bottom: 2rem;
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+			margin-bottom: 1.8rem;
+			list-style-type: none;
+
+			svg {
+				min-width: 2.7rem;
+				min-height: 2.7rem;
+				margin-right: 1.8rem;
+				color: var(--accent2);
+			}
+		}
+	}
+}
+
+// Office section
+
+.office {
+	background-color: var(--bg-dark);
+}
+
+// Other screen sizes
 
 @media (width <= 375px) {
 	.navbar {
@@ -218,19 +279,22 @@ nav {
 }
 
 @media (width >= 576px) {
-	.container {
+	.container,
+	.navbar__container {
 		max-width: 576px;
 	}
 }
 
 @media (width >= 768px) {
-	.container {
+	.container,
+	.navbar__container {
 		max-width: 768px;
 	}
 }
 
 @media (width >= 992px) {
-	.container {
+	.container,
+	.navbar__container {
 		max-width: 992px;
 	}
 
@@ -244,6 +308,10 @@ nav {
 			height: fit-content;
 			margin: auto 0;
 			max-width: 35%;
+		}
+
+		&__buttons {
+			margin-bottom: 0;
 		}
 
 		&__img {
@@ -268,10 +336,33 @@ nav {
 			max-width: 55%;
 		}
 	}
+
+	.about {
+		&__container {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__img {
+			display: block;
+			max-width: 30%;
+		}
+
+		&__info {
+			height: fit-content;
+			margin: auto;
+			max-width: 55%;
+		}
+	}
 }
 
 @media (width >= 1200px) {
-	.container {
+	.container,
+	.navbar__container {
 		max-width: 1200px;
+	}
+
+	.container {
+		padding: 12rem 2rem;
 	}
 }
