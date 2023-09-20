@@ -76,29 +76,51 @@ p {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1.5rem 3rem;
+	position: relative;
+	padding: 1.2rem 2.4rem;
 	color: var(--bg);
 	background-color: var(--accent1);
 	border-radius: 4rem;
+	border: 2px solid transparent;
 	font-size: 1.6rem;
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
 	cursor: pointer;
-	transition: color 0.2s, background-color 0.2s, border 0.2s;
+
+	& > * {
+		position: relative;
+		z-index: 10;
+	}
 
 	& *:first-child {
-		margin-right: 0.5rem;
+		margin-right: 0.4rem;
 	}
 
 	& > svg {
-		width: 1.6rem;
-		height: 1.6rem;
+		width: 2.4rem;
+		height: 2.4rem;
 	}
 
 	&--accent {
 		color: var(--text);
 		background-color: var(--accent2);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		border-radius: 4rem;
+		opacity: 0;
+		transition: opacity 0.2s;
+		z-index: 5;
+	}
+
+	&:hover::after {
+		opacity: 0.2;
 	}
 }
 
@@ -114,7 +136,7 @@ p {
 	object-fit: cover;
 }
 
-// Navigation
+// Navigation and logo
 
 .navbar {
 	position: sticky;
@@ -122,6 +144,7 @@ p {
 	width: 100%;
 	color: var(--bg);
 	background-color: var(--accent1);
+	border-bottom: 1px solid rgb(0, 0, 0, 0.25);
 	z-index: 100;
 
 	&__container {
@@ -133,26 +156,63 @@ p {
 		margin: auto;
 	}
 
-	&__logo {
-		max-height: 4.5rem;
-	}
-
 	&__menu {
+		display: none;
+
 		& > a {
-			margin-left: 3.2rem;
-			padding-bottom: 0.3rem;
+			padding: 0.8rem 1.6rem;
 			color: var(--bg);
-			border-bottom: 2px solid transparent;
+			border: 2px solid transparent;
+			border-radius: 4rem;
 			font-size: 1.6rem;
 			font-weight: bold;
 			text-decoration: none;
 			text-transform: uppercase;
-			transition: border 0.2s;
+			transition: border 0.2s, color 0.2s;
+
+			&:last-child {
+				margin-right: -1.6rem;
+			}
 
 			&:hover {
-				border-bottom: 2px solid var(--accent2);
+				border: 2px solid var(--accent2);
 			}
 		}
+	}
+
+	&__hamburger-button {
+		display: inline-block;
+		min-width: 4rem;
+		min-height: 4rem;
+		color: var(--bg);
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
+}
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: var(--bg);
+	font-size: 3.2rem;
+	text-decoration: none;
+
+	&__stomatolog {
+		display: none;
+		// text-transform: uppercase;
+		letter-spacing: -1px;
+	}
+
+	&__piasecki {
+		font-family: 'Calistoga', cursive;
+	}
+
+	& > svg {
+		min-width: 1.5em;
+		min-height: 1.5em;
+		color: var(--accent2);
 	}
 }
 
@@ -182,6 +242,8 @@ p {
 	}
 
 	&__info {
+		margin: auto;
+
 		& > ul {
 			li {
 				display: flex;
@@ -205,27 +267,11 @@ p {
 	}
 }
 
-// Pricelist section
-
-.pricelist {
-	background-color: var(--accent1);
-
-	&__container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-
-		h2 {
-			margin-bottom: 4rem;
-			color: var(--bg);
-			text-align: center;
-		}
-	}
-}
-
 // About section
 
 .about {
+	background-color: var(--bg-dark);
+
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -259,7 +305,26 @@ p {
 // Office section
 
 .office {
-	background-color: var(--bg-dark);
+	// background-color: var(--bg-dark);
+}
+
+// Pricelist and Technologies sections
+
+.pricelist,
+.technologies {
+	background-color: var(--accent1);
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h2 {
+			margin-bottom: 4rem;
+			color: var(--bg);
+			text-align: center;
+		}
+	}
 }
 
 // Other screen sizes
@@ -283,6 +348,12 @@ p {
 	.navbar__container {
 		max-width: 576px;
 	}
+
+	.logo {
+		&__stomatolog {
+			display: inline;
+		}
+	}
 }
 
 @media (width >= 768px) {
@@ -290,12 +361,39 @@ p {
 	.navbar__container {
 		max-width: 768px;
 	}
+
+	.services {
+		&__container {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__info {
+			height: fit-content;
+			max-width: 35%;
+		}
+
+		&__img {
+			display: block;
+			max-width: 55%;
+		}
+	}
 }
 
 @media (width >= 992px) {
 	.container,
 	.navbar__container {
 		max-width: 992px;
+	}
+
+	.navbar {
+		&__menu {
+			display: block;
+		}
+
+		&__hamburger-button {
+			display: none;
+		}
 	}
 
 	.hero {
@@ -315,24 +413,6 @@ p {
 		}
 
 		&__img {
-			max-width: 55%;
-		}
-	}
-
-	.services {
-		&__container {
-			flex-direction: row;
-			justify-content: space-between;
-		}
-
-		&__info {
-			height: fit-content;
-			margin: auto;
-			max-width: 35%;
-		}
-
-		&__img {
-			display: block;
 			max-width: 55%;
 		}
 	}
