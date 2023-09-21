@@ -81,7 +81,7 @@ p {
 	color: var(--bg);
 	background-color: var(--accent1);
 	border-radius: 4rem;
-	border: 2px solid transparent;
+	border: 1px solid transparent;
 	font-size: 1.6rem;
 	font-weight: bold;
 	text-decoration: none;
@@ -136,6 +136,12 @@ p {
 	object-fit: cover;
 }
 
+.underlined {
+	text-decoration: var(--accent2) underline;
+	text-decoration-skip-ink: none;
+	text-decoration-thickness: from-font;
+}
+
 // Navigation and logo
 
 .navbar {
@@ -160,10 +166,10 @@ p {
 		display: none;
 
 		& > a {
-			padding: 0.8rem 1.6rem;
+			margin: 0 1.2rem;
+			padding: 0.4rem;
 			color: var(--bg);
-			border: 2px solid transparent;
-			border-radius: 4rem;
+			border-bottom: 0.2rem solid transparent;
 			font-size: 1.6rem;
 			font-weight: bold;
 			text-decoration: none;
@@ -171,11 +177,12 @@ p {
 			transition: border 0.2s, color 0.2s;
 
 			&:last-child {
-				margin-right: -1.6rem;
+				margin-right: -0.4rem;
 			}
 
 			&:hover {
-				border: 2px solid var(--accent2);
+				color: var(--accent2);
+				border-bottom: 0.2rem solid var(--accent2);
 			}
 		}
 	}
