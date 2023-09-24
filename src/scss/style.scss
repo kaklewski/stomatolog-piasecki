@@ -1,5 +1,13 @@
-// Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+// Font: calistoga-regular - latin_latin-ext
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Calistoga';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/calistoga-v15-latin_latin-ext-regular.woff2')
+		format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	font-display: swap;
+}
 
 // Global variables - light theme
 :root {
@@ -15,13 +23,13 @@
 // Global variables - dark theme
 @media (prefers-color-scheme: dark) {
 	:root {
-		--bg: #222628;
-		--bg-dark: #191a1c;
-		--text: #f1f1f1;
-		--text-light: #dfdcd7;
-		--text-accent1: #7cc4fd;
-		--accent1: #004586;
-		--accent2: #80b541;
+		--bg: #1c1e1f;
+		--bg-dark: #141616;
+		--text: #bfccc7;
+		--text-light: #bfccc7;
+		--text-accent1: #69ace2;
+		--accent1: #00376b;
+		--accent2: #669134;
 	}
 }
 
@@ -35,6 +43,11 @@
 }
 
 // General tags
+
+::selection {
+	color: var(--text-light);
+	background-color: var(--accent2);
+}
 
 html {
 	font-size: 62.5%;
@@ -73,6 +86,10 @@ p {
 	line-height: 1.4;
 }
 
+section {
+	scroll-margin-top: 8rem;
+}
+
 // General classes
 
 .button {
@@ -84,7 +101,7 @@ p {
 	color: var(--text-light);
 	background-color: var(--accent1);
 	border-radius: 4rem;
-	border: 1px solid transparent;
+	border: 3px solid transparent;
 	font-size: 1.6rem;
 	font-weight: bold;
 	text-decoration: none;
@@ -115,7 +132,7 @@ p {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background-color: white;
+		background-color: var(--bg);
 		border-radius: 4rem;
 		opacity: 0;
 		transition: opacity 0.2s;
@@ -146,7 +163,7 @@ p {
 	text-decoration-thickness: from-font;
 }
 
-// Navigation and logo
+// Navbar and logo
 
 .navbar {
 	position: sticky;
@@ -179,6 +196,10 @@ p {
 			text-decoration: none;
 			text-transform: uppercase;
 			transition: border 0.2s, color 0.2s;
+
+			&:last-child {
+				margin-right: 0;
+			}
 
 			&::after {
 				content: '';
@@ -232,6 +253,71 @@ p {
 	}
 }
 
+// Hamburger menu (mobile navigation)
+
+.hamburger-menu {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--accent1);
+	transform: translateX(100%);
+	transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+	z-index: 200;
+
+	&--active {
+		transform: translateX(0);
+	}
+
+	&__close-button {
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+		max-width: 4rem;
+		max-height: 4rem;
+		color: var(--text-light);
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		margin-top: 4rem;
+
+		a {
+			position: relative;
+			width: max-content;
+			margin-bottom: 3.6rem;
+			color: var(--text-light);
+			font-size: 2.7rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-decoration: none;
+			transition: border 0.2s, color 0.2s;
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 0;
+				height: 0.3rem;
+				background-color: var(--accent2);
+				transition: width 0.2s;
+			}
+
+			&:hover::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
 // Hero section
 
 .hero {
@@ -244,6 +330,11 @@ p {
 
 	&__buttons {
 		margin: 4rem 0;
+
+		& > a {
+			margin-right: 0.5rem;
+			margin-bottom: 1rem;
+		}
 	}
 }
 
@@ -292,6 +383,9 @@ p {
 	}
 
 	&__img {
+		max-width: 576px;
+		margin: auto;
+		margin-bottom: 3rem;
 		aspect-ratio: 1 / 1;
 	}
 
@@ -337,10 +431,10 @@ p {
 	}
 }
 
-// Pricelist and Technologies sections
+// Pricelist Link and Technologies Link sections
 
-.pricelist,
-.technologies {
+.pricelist-link,
+.technologies-link {
 	background-color: var(--accent1);
 
 	&__container {
@@ -403,6 +497,14 @@ p {
 // Contact section
 
 .contact {
+	a {
+		color: var(--text-accent1);
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
@@ -429,6 +531,82 @@ p {
 	}
 }
 
+// Pricelist page
+
+.pricelist {
+	&__container {
+		width: fit-content;
+		margin: 6rem auto;
+		padding: 2rem;
+	}
+
+	h2 {
+		margin-top: 6rem;
+	}
+
+	table,
+	tr,
+	td {
+		font-size: 1.6rem;
+		border: 1px solid var(--accent1);
+		border-collapse: collapse;
+	}
+
+	table {
+		width: 100%;
+	}
+
+	tr {
+		&:nth-child(even) {
+			background-color: var(--bg-dark);
+		}
+	}
+
+	td {
+		padding: 0.8rem;
+
+		&:nth-child(odd) {
+			width: 70%;
+		}
+
+		&:nth-child(even) {
+			width: 30%;
+		}
+	}
+
+	li {
+		padding-left: 1.6rem;
+		list-style-position: inside;
+
+		&::marker {
+			color: var(--text-accent1);
+		}
+	}
+}
+
+// Technologies page
+
+.technologies {
+	&__item {
+		display: flex;
+		flex-direction: column;
+		margin: 8rem 0;
+
+		&__photo {
+			margin: auto;
+			max-width: 100%;
+			max-height: 30rem;
+			object-fit: contain;
+			border-radius: 25px;
+			transition: scale 0.6s;
+		}
+
+		&__info {
+			margin: auto;
+		}
+	}
+}
+
 // Footer
 
 .footer {
@@ -437,10 +615,27 @@ p {
 
 	&__container {
 		display: flex;
+		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		padding: 2rem;
 		margin: auto;
+		padding: 2.8rem 2rem;
+		font-size: 1.4rem;
+
+		a {
+			color: var(--text-light);
+			text-decoration: none;
+			transition: color 0.2s;
+
+			&:hover {
+				color: var(--accent2);
+			}
+		}
+	}
+
+	&__separator {
+		display: none;
+		color: var(--accent2);
 	}
 }
 
@@ -511,6 +706,33 @@ p {
 			width: 50%;
 		}
 	}
+
+	.pricelist {
+		table {
+			max-width: 768px;
+		}
+
+		td {
+			&:nth-child(odd) {
+				width: 80%;
+			}
+
+			&:nth-child(even) {
+				width: 20%;
+			}
+		}
+	}
+
+	.footer {
+		br {
+			display: none;
+		}
+
+		&__separator {
+			display: inline;
+			color: var(--accent2);
+		}
+	}
 }
 
 @media (width >= 992px) {
@@ -540,7 +762,7 @@ p {
 		&__info {
 			height: fit-content;
 			margin: auto 0;
-			max-width: 35%;
+			max-width: 45%;
 		}
 
 		&__buttons {
@@ -548,7 +770,7 @@ p {
 		}
 
 		&__img {
-			max-width: 55%;
+			max-width: 50%;
 		}
 	}
 
@@ -560,7 +782,9 @@ p {
 
 		&__img {
 			display: block;
+			margin-bottom: auto;
 			max-width: 30%;
+			aspect-ratio: 2 / 3;
 		}
 
 		&__info {
@@ -576,7 +800,7 @@ p {
 			flex-wrap: wrap;
 
 			& > .image {
-				max-width: calc(50% - 2rem);
+				max-width: calc(50% - 1rem);
 				margin-bottom: 2rem;
 
 				&:nth-child(even) {
@@ -617,6 +841,16 @@ p {
 		padding: 12rem 2rem;
 	}
 
+	.hero {
+		&__info {
+			max-width: 35%;
+		}
+
+		&__img {
+			max-width: 55%;
+		}
+	}
+
 	.office {
 		&__image-container {
 			padding-bottom: 12rem;
@@ -625,6 +859,34 @@ p {
 
 	.opinions {
 		display: block;
+	}
+
+	.technologies {
+		&__item {
+			display: flex;
+			flex-direction: row;
+
+			&__photo {
+				width: 30%;
+				max-height: fit-content;
+				background-color: #fff;
+				aspect-ratio: 1 / 1;
+				object-fit: cover;
+
+				&:hover {
+					scale: 101%;
+				}
+			}
+
+			&__info {
+				margin: auto;
+				width: 65%;
+			}
+
+			&:nth-child(even) {
+				flex-direction: row-reverse;
+			}
+		}
 	}
 }
 

@@ -9,7 +9,30 @@
 			name="description"
 			content="Najlepszy i najnowocześniejszy gabinet dentystyczny w Toruniu." />
 
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./favicon/apple-touch-icon.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./favicon/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./favicon/favicon-16x16.png" />
+		<link rel="manifest" href="./favicon/site.webmanifest" />
+
 		<link rel="stylesheet" href="./css/style.min.css" />
+
+		<link
+			rel="preload"
+			href="./fonts/calistoga-v15-latin_latin-ext-regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin />
 
 		<script defer src="./js/main.min.js"></script>
 	</head>
@@ -21,7 +44,7 @@
 					<div class="hero__info">
 						<h1>
 							Zadbam o Twój
-							<span class="underlined">zdrowy</span> uśmiech.
+							<span class="underlined">zdrowy</span> uśmiech
 						</h1>
 						<p>
 							Wykorzystując moje wieloletnie doświadczenie oraz
@@ -31,7 +54,7 @@
 						</p>
 						<div class="hero__buttons">
 							<a
-								href="tel:+48691392333"
+								href="tel:+48566200415"
 								class="button button--accent">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -51,12 +74,16 @@
 									<path
 										d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
 								</svg>
-								<span>691 392 333</span>
+								<span>56 620 04 15</span>
 							</a>
-							<a href="" class="button">
+							<a
+								href="https://www.google.com/maps/place/Dentysta+Toru%C5%84+-+Stomatolog+Piasecki/@53.0451365,18.5863616,17z/data=!3m1!4b1!4m6!3m5!1s0x470334659cd58237:0x182831298de0604!8m2!3d53.0451365!4d18.5889365!16s%2Fg%2F1tx141xx?entry=ttu"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="button">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									class="icon icon-tabler icon-tabler-mail"
+									class="icon icon-tabler icon-tabler-map-pin"
 									width="40"
 									height="40"
 									viewBox="0 0 24 24"
@@ -70,10 +97,11 @@
 										d="M0 0h24v24H0z"
 										fill="none"></path>
 									<path
-										d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
-									<path d="M3 7l9 6l9 -6"></path>
+										d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+									<path
+										d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
 								</svg>
-								<span>Napisz</span>
+								<span>Chabrowa 24a</span>
 							</a>
 						</div>
 					</div>
@@ -155,7 +183,7 @@
 									<path
 										d="M12 3l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3l6 -3z"></path>
 								</svg>
-								<span>Leczenie endodontyczne</span>
+								<span>Leczenie endodontyczne (kanałowe)</span>
 							</li>
 							<li>
 								<svg
@@ -245,8 +273,8 @@
 					</div>
 				</div>
 			</section>
-			<section class="pricelist">
-				<div class="pricelist__container container">
+			<section class="pricelist-link">
+				<div class="pricelist-link__container container">
 					<h2>
 						Zapoznaj się z pełną ofertą i
 						<span class="underlined">korzystnym</span> cennikiem:
@@ -322,7 +350,7 @@
 									<path d="M9 12l2 2l4 -4"></path>
 								</svg>
 								<span
-									>Ukończenie kierunku Stomatologia na
+									>Studia na kierunku stomatologicznym na
 									Akademii Medycznej w Gdańsku</span
 								>
 							</li>
@@ -347,9 +375,8 @@
 									<path d="M9 12l2 2l4 -4"></path>
 								</svg>
 								<span
-									>Ukończenie kursu specjalistycznego z
-									zastosowania botoksu oraz kwasu
-									hialuronowego</span
+									>Kurs specjalistyczny z zastosowania botoksu
+									oraz kwasu hialuronowego</span
 								>
 							</li>
 						</ul>
@@ -380,8 +407,8 @@
 						class="image office__image-4" />
 				</div>
 			</section>
-			<section class="technologies">
-				<div class="technologies__container container">
+			<section class="technologies-link">
+				<div class="technologies-link__container container">
 					<h2>
 						W moim gabinecie używam
 						<span class="underlined">najnowszych</span> technologii:
@@ -411,8 +438,7 @@
 			</section>
 			<section class="opinions">
 				<div class="opinions__container container">
-					<h2>Opinie pacjentów (sekcja w przygotowaniu)</h2>
-
+					<h2>Opinie pacjentów</h2>
 					<div class="opinions__slider">
 						<div class="testimonial">
 							<div class="testimonial__stars">
@@ -652,7 +678,7 @@
 			</section>
 			<section class="contact" id="kontakt">
 				<div class="contact__container container">
-					<h2>Kiedy się widzimy?</h2>
+					<h2>Skontaktujmy się</h2>
 					<div class="contact__wrapper">
 						<div class="contact__info">
 							<h3>Kontakt</h3>
@@ -663,7 +689,7 @@
 									width="40"
 									height="40"
 									viewBox="0 0 24 24"
-									stroke-width="2"
+									stroke-width="1.5"
 									stroke="currentColor"
 									fill="none"
 									stroke-linecap="round"
@@ -687,7 +713,7 @@
 									width="40"
 									height="40"
 									viewBox="0 0 24 24"
-									stroke-width="2"
+									stroke-width="1.5"
 									stroke="currentColor"
 									fill="none"
 									stroke-linecap="round"
@@ -705,11 +731,11 @@
 							<div class="contact__info__row">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									class="icon icon-tabler icon-tabler-map-2"
+									class="icon icon-tabler icon-tabler-map-pin"
 									width="40"
 									height="40"
 									viewBox="0 0 24 24"
-									stroke-width="2"
+									stroke-width="1.5"
 									stroke="currentColor"
 									fill="none"
 									stroke-linecap="round"
@@ -719,15 +745,12 @@
 										d="M0 0h24v24H0z"
 										fill="none"></path>
 									<path
-										d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5"></path>
-									<path d="M9 4v13"></path>
-									<path d="M15 7v5.5"></path>
+										d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
 									<path
-										d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z"></path>
-									<path d="M19 18v.01"></path>
+										d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
 								</svg>
 								<span>
-									ul. Chabrowa 24A, <br />
+									ul. Chabrowa 24A<br />
 									87-100 Toruń
 								</span>
 							</div>
@@ -741,7 +764,7 @@
 									width="40"
 									height="40"
 									viewBox="0 0 24 24"
-									stroke-width="2"
+									stroke-width="1.5"
 									stroke="currentColor"
 									fill="none"
 									stroke-linecap="round"
@@ -797,7 +820,7 @@
 									width="40"
 									height="40"
 									viewBox="0 0 24 24"
-									stroke-width="2"
+									stroke-width="1.5"
 									stroke="currentColor"
 									fill="none"
 									stroke-linecap="round"
@@ -812,7 +835,7 @@
 									<path d="M7 15l.01 0"></path>
 									<path d="M11 15l2 0"></path>
 								</svg>
-								<span>Płatność kartą jest możliwa</span>
+								<span>Możliwość płatności kartą</span>
 							</div>
 						</div>
 						<div class="contact__info">
@@ -820,11 +843,37 @@
 							<div class="contact__info__row">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-parking"
+									width="40"
+									height="40"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round">
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"></path>
+									<path
+										d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+									<path
+										d="M9 16v-8h4a2 2 0 0 1 0 4h-4"></path>
+								</svg>
+								<span>
+									Darmowy parking <br />
+									przy ul. Chabrowej
+								</span>
+							</div>
+							<div class="contact__info__row">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
 									class="icon icon-tabler icon-tabler-bus-stop"
 									width="40"
 									height="40"
 									viewBox="0 0 24 24"
-									stroke-width="2"
+									stroke-width="1.5"
 									stroke="currentColor"
 									fill="none"
 									stroke-linecap="round"
@@ -850,11 +899,11 @@
 							<div class="contact__info__row">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									class="icon icon-tabler icon-tabler-parking"
+									class="icon icon-tabler icon-tabler-map-pin-2"
 									width="40"
 									height="40"
 									viewBox="0 0 24 24"
-									stroke-width="2"
+									stroke-width="1.5"
 									stroke="currentColor"
 									fill="none"
 									stroke-linecap="round"
@@ -864,20 +913,27 @@
 										d="M0 0h24v24H0z"
 										fill="none"></path>
 									<path
-										d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+										d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7"></path>
+									<path d="M9 4v13"></path>
+									<path d="M15 7v5"></path>
 									<path
-										d="M9 16v-8h4a2 2 0 0 1 0 4h-4"></path>
+										d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z"></path>
+									<path d="M19 18v.01"></path>
 								</svg>
-								<span
-									>Darmowy parking <br />
-									przy ul. Chabrowej</span
-								>
+								<span>
+									<a
+										href="https://www.google.com/maps/place/Dentysta+Toru%C5%84+-+Stomatolog+Piasecki/@53.0451365,18.5863616,17z/data=!3m1!4b1!4m6!3m5!1s0x470334659cd58237:0x182831298de0604!8m2!3d53.0451365!4d18.5889365!16s%2Fg%2F1tx141xx?entry=ttu"
+										target="_blank"
+										rel="noopener noreferrer">
+										Zobacz w Google Maps
+									</a>
+								</span>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- @include 'footer.kit' -->
 		</main>
+		<!-- @include 'footer.kit' -->
 	</body>
 </html>

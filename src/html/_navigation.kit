@@ -22,20 +22,20 @@
 		</a>
 
 		<div class="navbar__menu">
-			<a href="#uslugi">Usługi</a>
-			<a href="/cennik">Cennik</a>
-			<a href="#o-mnie">O mnie</a>
-			<a href="/technologie">Technologie</a>
-			<a href="#kontakt">Kontakt</a>
+			<a href="/#uslugi">Usługi</a>
+			<a href="/cennik.html">Cennik</a>
+			<a href="/#o-mnie">O mnie</a>
+			<a href="/technologie.html">Technologie</a>
+			<a href="/#kontakt">Kontakt</a>
 		</div>
-		<button class="navbar__hamburger-button">
+		<button class="navbar__hamburger-button hamburger-nav-toggler">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="icon icon-tabler icon-tabler-menu-2"
 				width="4rem"
 				height="4rem"
 				viewBox="0 0 24 24"
-				stroke-width="1.5"
+				stroke-width="2"
 				stroke="currentColor"
 				fill="none"
 				stroke-linecap="round"
@@ -46,5 +46,32 @@
 				<path d="M4 18l16 0"></path>
 			</svg>
 		</button>
+	</div>
+</nav>
+
+<nav class="hamburger-menu">
+	<button class="hamburger-menu__close-button hamburger-nav-toggler">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			class="icon icon-tabler icon-tabler-x"
+			width="4rem"
+			height="4rem"
+			viewBox="0 0 24 24"
+			stroke-width="2"
+			stroke="currentColor"
+			fill="none"
+			stroke-linecap="round"
+			stroke-linejoin="round">
+			<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+			<path d="M18 6l-12 12"></path>
+			<path d="M6 6l12 12"></path>
+		</svg>
+	</button>
+	<div class="hamburger-menu__links">
+		<a href="/#uslugi" class="hamburger-menu__link">Usługi</a>
+		<a href="/cennik.html">Cennik</a>
+		<a href="/#o-mnie" class="hamburger-menu__link">O mnie</a>
+		<a href="/technologie.html">Technologie</a>
+		<a href="/#kontakt" class="hamburger-menu__link">Kontakt</a>
 	</div>
 </nav>
