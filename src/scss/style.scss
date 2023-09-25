@@ -92,6 +92,11 @@ section {
 
 // General classes
 
+.back-button-container {
+	display: flex;
+	justify-content: center;
+}
+
 .button {
 	display: inline-flex;
 	justify-content: center;
@@ -113,8 +118,8 @@ section {
 		z-index: 10;
 	}
 
-	& *:first-child {
-		margin-right: 0.4rem;
+	& *:nth-child(2) {
+		margin-left: 0.4rem;
 	}
 
 	& > svg {
@@ -562,8 +567,6 @@ section {
 .pricelist {
 	&__container {
 		width: fit-content;
-		margin: 6rem auto;
-		padding: 2rem;
 	}
 
 	h2 {
@@ -605,6 +608,10 @@ section {
 		&::marker {
 			color: var(--text-accent1);
 		}
+	}
+
+	.back-button-container {
+		margin-top: 6rem;
 	}
 }
 
@@ -904,7 +911,7 @@ section {
 
 			&__info {
 				margin: auto;
-				width: 65%;
+				width: 60%;
 			}
 
 			&:nth-child(even) {

@@ -1,11 +1,11 @@
 const testimonials = [
+    {
+        author: 'Michelle O.',
+        text: 'Doktor Piasecki to wspaniały specjalista. Profesjonalny, sympatyczny i, co najważniejsze, z ogromną wiedzą i doświadczeniem. To już kolejna moja wizyta u doktora i jak zwykle wychodzę zadowolona. Gabinet może i niewielki, ale jest bardzo nowoczesny, czysty i estetycznie urządzony. Dużym plusem są dla mnie papierowe kubeczki, a nie tak jak w większości gabinetów plastikowe - szczegół, ale świadczy o dbałości o ekologię.',
+    },
 	{
 		author: 'Joanna P.',
 		text: 'Pan Doktor Wojciech Piasecki jest naprawdę godny polecenia i uważam, że jest najlepszym dentystą w Toruniu. Od wielu lat korzystamy z jego usług. Wszystko dokładnie, bez bólu, w miłej i sympatycznej atmosferze. Gdy boli, zawsze znajdzie się termin, co jest bardzo ważne. Gabinet bardzo czysty, ładny i przyjemny. Piękny uśmiech bez bólu tylko u dr Piaseckiego. Pierwsza klasa! Polecam z całego <3',
-	},
-	{
-		author: 'Michelle O.',
-		text: 'Doktor Piasecki to wspaniały specjalista. Profesjonalny, sympatyczny i, co najważniejsze, z ogromną wiedzą i doświadczeniem. To już kolejna moja wizyta u doktora i jak zwykle wychodzę zadowolona. Gabinet może i niewielki, ale jest bardzo nowoczesny, czysty i estetycznie urządzony. Dużym plusem są dla mnie papierowe kubeczki, a nie tak jak w większości gabinetów plastikowe - szczegół, ale świadczy o dbałości o ekologię.',
 	},
 	{
 		author: 'Marcin L.',
