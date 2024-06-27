@@ -1,29 +1,45 @@
 # Stomatolog Piasecki
 
-## Table of contents
+## General Info
 
--   [General info](#general-info)
--   [Technologies](#technologies)
--   [Getting started](#getting-started)
+This project is a dentist website that I created for one of my clients.
 
-## General info
+## Live Version
 
-This project is a dentist website. Live version is available at https://stomatologpiasecki.pl/.
+Available at: https://stomatologpiasecki.pl/
+
+## Features
+
+-   **Responsive Design**: Optimized for seamless use on both desktop and mobile devices.
+-   **Light and Dark Modes**: Automatically adjusts to match the user's preferred theme.
+-   **Modern Aesthetics**: Clean, professional design with consistent color schemes, fonts and style.
+-   **User-Friendly Navigation**: Intuitive menus (navigation and mobile) for easy access to services, pricing, used technologies and contact information.
+-   **Informative Content**: Detailed descriptions of services, technologies, and professional background.
+-   **Patient Testimonials**: Interactive carousel with reviews from patients.
 
 ## Technologies
 
-Project is created with:
+Created with:
 
--   HTML 5
--   JavaScript ES6
--   SASS 1.66.1
--   gulp 4.0.2
+-   Vanilla **JavaScript**
+-   **HTML**
+-   **SASS**
+-   Put together with **Gulp.js**
 
-## Getting started
+## Run Locally
 
-### How to run the project?
+1. Clone the project to your local machine:
 
-1. Clone the project to your local machine.
-2. Install all the dependencies.
-3. Start project by running `gulp` command.
+`git clone https://github.com/kaklewski/stomatolog-piasecki`
 
+2. Navigate to the project directory:
+
+`cd stomatolog-piasecki`
+
+3. Install the dependencies:
+
+`npm install`
+
+4. Start the development environment:
+
+`gulp`
