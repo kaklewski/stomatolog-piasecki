@@ -8,6 +8,12 @@ This project is a dentist website that I created for one of my clients.
 
 Available at: https://stomatologpiasecki.pl/
 
+## Screenshots
+
+![Screenshot 1](screenshots/screenshot1.png)
+
+![Screenshot 2](screenshots/screenshot2.png)
+
 ## Features
 
 -   **Responsive Design**: Optimized for seamless use on both desktop and mobile devices.
