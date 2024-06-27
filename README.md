@@ -1,18 +1,14 @@
 # Stomatolog Piasecki
 
-## General Info
+## About
 
-This project is a dentist website that I created for one of my clients.
+This project is a dental website made for one of my clients. Built using HTML, CSS, vanilla JS. Put together with Gulp.js.
+
+It is only available in Polish 🇵🇱 language. Please just treat is as lorem ipsum. 😉
 
 ## Live Version
 
 Available at: https://stomatologpiasecki.pl/
-
-## Screenshots
-
-![Screenshot 1](screenshots/screenshot1.png)
-
-![Screenshot 2](screenshots/screenshot2.png)
 
 ## Features
 
@@ -23,14 +19,11 @@ Available at: https://stomatologpiasecki.pl/
 -   **Informative Content**: Detailed descriptions of services, technologies, and professional background.
 -   **Patient Testimonials**: Interactive carousel with reviews from patients.
 
-## Technologies
+## Screenshots
 
-Created with:
+![Screenshot 1](screenshots/screenshot1.png)
 
--   Vanilla **JavaScript**
--   **HTML**
--   **SASS**
--   Put together with **Gulp.js**
+![Screenshot 2](screenshots/screenshot2.png)
 
 ## Run Locally
 
