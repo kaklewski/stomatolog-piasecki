@@ -2,7 +2,7 @@
 
 ## About
 
-This project is a dental website made for one of my clients. Built using HTML, CSS, vanilla JS. Put together with Gulp.js.
+This project is a dental website made for one of my clients. Built using HTML, SCSS, vanilla JavaScript. Put together with Gulp.js.
 
 It is only available in Polish 🇵🇱 language. Please just treat is as lorem ipsum. 😉
 
