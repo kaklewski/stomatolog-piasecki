@@ -2,7 +2,7 @@
 
 ## About
 
-This project is a dental website made for one of my clients. Built using HTML, SCSS and vanilla JavaScript. Put together with Gulp.js.
+This project is a dentist website made for one of my clients. Built using HTML, SCSS and vanilla JavaScript. Put together with Gulp.js.
 
 It is only available in Polish 🇵🇱 language. Please just treat is as lorem ipsum. 😉
 
@@ -12,12 +12,12 @@ Available at: https://stomatologpiasecki.pl/
 
 ## Features
 
--   **Responsive Design**: Optimized for seamless use on both desktop and mobile devices.
--   **Light and Dark Modes**: Automatically adjusts to match the user's preferred theme.
--   **Modern Aesthetics**: Clean, professional design with consistent color schemes, fonts and style.
--   **User-Friendly Navigation**: Intuitive menus (navigation and mobile) for easy access to services, pricing, used technologies and contact information.
--   **Informative Content**: Detailed descriptions of services, technologies, and professional background.
--   **Patient Testimonials**: Interactive carousel with reviews from patients.
+- **Responsive Design**: Optimized for seamless use on both desktop and mobile devices.
+- **Light and Dark Modes**: Automatically adjusts to match the user's preferred theme.
+- **Modern Aesthetics**: Clean, professional design with consistent color schemes, fonts and style.
+- **User-Friendly Navigation**: Intuitive menus (navigation and mobile) for easy access to services, pricing, used technologies and contact information.
+- **Informative Content**: Detailed descriptions of services, technologies, and professional background.
+- **Patient Testimonials**: Interactive carousel with reviews from patients.
 
 ## Screenshots
 
@@ -41,4 +41,4 @@ Available at: https://stomatologpiasecki.pl/
 
 4. Start the development environment:
 
-`gulp`
+`npm start`
