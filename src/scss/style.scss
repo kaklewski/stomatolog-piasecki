@@ -4,7 +4,8 @@
   font-family: 'Calistoga';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/calistoga-v15-latin_latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/calistoga-v15-latin_latin-ext-regular.woff2')
+    format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   font-display: swap;
 }
 
@@ -14,6 +15,7 @@
   --bg-dark: #eceef5;
   --text: #0f0f0f;
   --text-light: #fff;
+  --text-dark: #0f0f0f;
   --text-accent1: #004586;
   --accent1: #004586;
   --accent2: #80b541;
@@ -22,13 +24,14 @@
 // Global variables - dark theme
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1c1e1f;
-    --bg-dark: #141616;
-    --text: #e4e9e7;
-    --text-light: #e4e9e7;
-    --text-accent1: #69ace2;
+    --bg: #15171c;
+    --bg-dark: #1e2128;
+    --text: #e6e8ee;
+    --text-light: #fff;
+    --text-dark: #0f0f0f;
+    --text-accent1: #4da3ff;
     --accent1: #00376b;
-    --accent2: #669134;
+    --accent2: #9ad65a;
   }
 }
 
@@ -128,7 +131,7 @@ section {
   }
 
   &--accent {
-    color: var(--text);
+    color: var(--text-dark);
     background-color: var(--accent2);
   }
 
@@ -200,7 +203,9 @@ section {
       font-weight: bold;
       text-decoration: none;
       text-transform: uppercase;
-      transition: border 0.2s, color 0.2s;
+      transition:
+        border 0.2s,
+        color 0.2s;
 
       &:last-child {
         margin-right: 0;
@@ -303,7 +308,9 @@ section {
       font-weight: bold;
       text-transform: uppercase;
       text-decoration: none;
-      transition: border 0.2s, color 0.2s;
+      transition:
+        border 0.2s,
+        color 0.2s;
 
       &::after {
         content: '';
